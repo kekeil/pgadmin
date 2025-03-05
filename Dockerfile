@@ -1,9 +1,9 @@
-FROM dpage/pgadmin4  # Utilisation de l'image officielle
+FROM dpage/pgadmin4  # Image officielle de pgAdmin
 
-# Définition des variables d'environnement (les valeurs seront injectées via Coolify)
+# Définition des variables d'environnement (injectées via Coolify)
 ENV PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
 ENV PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
 
-EXPOSE 80  # Expose le port HTTP de pgAdmin
+EXPOSE 80  # Expose le port HTTP
 
-CMD ["/entrypoint.sh"]  # Commande d’exécution par défaut
+CMD ["/entrypoint.sh"]
